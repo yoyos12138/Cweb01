@@ -8,6 +8,10 @@ namespace Cweb01
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddControllers();
+
+            var list1=new List<int>{1,2,3,4};
+            builder.Services.AddSingleton<List<int>>(list1);
+
             var app = builder.Build();
 
             if (app.Environment.IsDevelopment())
